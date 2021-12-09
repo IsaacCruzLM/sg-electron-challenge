@@ -2,18 +2,74 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>Wheather App</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="selectHeader">
+      <h1>Selecione a cidade:</h1>
+      <div class="selectContainer">
+        <i class="uil uil-location-point"></i>
+        <select>
+          <option value="" selected>London</option>
+          <option value="">São Paulo</option>
+          <option value="">Cachoeira</option>
+        </select>
+      </div>
+    </div>
+    <div class="wheatherInfo">
+      <div class="tempInfo">
+        <i class="uil uil-cloud-sun"></i>
+        <p>Nublado</p>
+        <h2>69 ºC</h2>
+      </div>
+      <div class="othersInfo">
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Velocidade Do Vento</p>
+          </div>
+          <p>8 km/h</p>
+        </div>
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Humidade</p>
+          </div>
+          <p>80 %</p>
+        </div>
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Pressão</p>
+          </div>
+          <p>1008 bar</p>
+        </div>
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Temperatura Máxima</p>
+          </div>
+          <p>7 C</p>
+        </div>
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Temperatura Mínima</p>
+          </div>
+          <p>9 C</p>
+        </div>
+        <div class="itemCard">
+          <div class="itemTitle">
+            <i class="uil uil-cloud-sun"></i>
+            <p>Sensação Térmica</p>
+          </div>
+          <p>12 C</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
 </html>

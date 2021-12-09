@@ -9,5 +9,9 @@
   "author": "Victor Ximenis",
   "devDependencies": {
     "electron": "^16.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "electron-builder": "^22.14.5"
   }
 }
