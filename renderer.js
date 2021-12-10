@@ -34,19 +34,19 @@ function searchCityByName() {
 
         closeModalForSearchCity();
     }
-}
+};
 
 function openModalForSearchCity() {
     const modal = document.getElementById('searchModal');
     modal.style.display = 'block';
-}
+};
 
 function closeModalForSearchCity() {
     const modal = document.getElementById('searchModal');
     modal.style.display = 'none';
 
     document.getElementById('SearchModalInput').value = "";
-}
+};
 
 function changeIconByWeatherMain(weatherMain) {
     const weatherMainElement = document.getElementById('WeatherMain');
@@ -78,7 +78,7 @@ function changeIconByWeatherMain(weatherMain) {
             weatherMainIconElement.className = 'uil uil-cloud-meatball';
             break;
     }
-}
+};
 
 function renderAPIRespostData(data) {
     const { temp, feels_like, temp_min, temp_max, pressure, humidity } = data.main;

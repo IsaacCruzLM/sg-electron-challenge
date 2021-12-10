@@ -59,6 +59,11 @@ html, body {
     outline: none;
 }
 
+.selectHeader .selectContainer select:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
 .selectHeader .selectContainer select option {
     font-size: 0.9rem;
     font-weight: 600;
@@ -73,6 +78,11 @@ html, body {
     padding: 5px;
     border-radius: 1rem;
     margin-left: 20px;
+}
+
+.selectHeader .selectContainer button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
 }
 
 .wheatherInfo {
