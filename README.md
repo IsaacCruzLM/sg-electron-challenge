@@ -4,16 +4,16 @@ WeatherApp is an application made by the Electron JS framework, cross-platform f
 
 ## Instructions
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+if you want to contribute to the development or observe the code desolved on your machine, follow the instructions below
 
 ```bash
 # Clone this repository
 git clone https://github.com/victorximenis/sg-electron-challenge
-# Go into the repository
+
 cd sg-electron-challenge
-# Install dependencies
+
 npm install
-# Run the app
+
 npm start
 ```
 
