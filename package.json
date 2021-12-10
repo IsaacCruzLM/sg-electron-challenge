@@ -4,14 +4,25 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "author": "Victor Ximenis",
   "devDependencies": {
-    "electron": "^16.0.2"
+    "electron": "^16.0.2",
+    "electron-builder": "^22.14.5"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "electron-builder": "^22.14.5"
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  },
+  "build": {
+    "appId": "com.electron.app",
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "my_electron_app.exe"
+    }
   }
 }

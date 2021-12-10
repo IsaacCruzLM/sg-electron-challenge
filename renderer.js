@@ -20,7 +20,7 @@ function searchCityByName() {
 
     if (newData.cod == '404') {
         closeModalForSearchCity();
-        return alert('Desculpe, não foi possível encontrar está cidade')
+        return alert('Desculpe, não foi possível encontrar esta cidade')
     } else {
         const newOption = document.createElement('option');
         newOption.value = newData.id;
