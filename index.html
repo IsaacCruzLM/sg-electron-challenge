@@ -11,64 +11,132 @@
       <h1>Selecione a cidade:</h1>
       <div class="selectContainer">
         <i class="uil uil-location-point"></i>
-        <select>
-          <option value="" selected>London</option>
-          <option value="">São Paulo</option>
-          <option value="">Cachoeira</option>
+        <select id="selectCity">
+          <option value="6321162">Belo Horizonte</option>
+          <option value="524894">Moscou</option>
+          <option value="2735943">Porto</option>
+          <option value="5368361">Los Angeles</option>
+          <option value="2643743">Londres</option>
         </select>
+
+        <button id="OpenModalButton">
+          <i class="uil uil-search"></i>
+        </button>
       </div>
     </div>
     <div class="wheatherInfo">
       <div class="tempInfo">
-        <i class="uil uil-cloud-sun"></i>
-        <p>Nublado</p>
-        <h2>69 ºC</h2>
+        <i id="WeatherMainIcon" class="uil uil-cloud-sun"></i>
+        <p id="WeatherMain">Nublado</p>
+        <div class="tempResult">
+          <h2 id="CityTemp">
+            00
+          </h2>
+          <span>ºC</span>
+        </div>
       </div>
       <div class="othersInfo">
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-wind"></i>
             <p>Velocidade Do Vento</p>
           </div>
-          <p>8 km/h</p>
+          <div class="itemResult">
+            <p id="WindSpeed">
+              0
+            </p>
+            <span>
+              m/s
+            </span>
+          </div>
         </div>
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-raindrops-alt"></i>
             <p>Humidade</p>
           </div>
-          <p>80 %</p>
+          <div class="itemResult">
+            <p id="Humidity">
+              00
+            </p>
+            <span>
+              %
+            </span>
+          </div>
         </div>
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-windsock"></i>
             <p>Pressão</p>
           </div>
-          <p>1008 bar</p>
+          <div class="itemResult">
+            <p id="Pressure">
+              0000
+            </p>
+            <span>
+              hPa
+            </span>
+          </div>
         </div>
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-temperature-plus"></i>
             <p>Temperatura Máxima</p>
           </div>
-          <p>7 C</p>
+          <div class="itemResult">
+            <p id="MaximumTemperature">
+              00
+            </p>
+            <span>
+              ºC
+            </span>
+          </div>
         </div>
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-temperature-minus"></i>
             <p>Temperatura Mínima</p>
           </div>
-          <p>9 C</p>
+          <div class="itemResult">
+            <p id="MinimumTemperature">
+              00
+            </p>
+            <span>
+              ºC
+            </span>
+          </div>
         </div>
         <div class="itemCard">
           <div class="itemTitle">
-            <i class="uil uil-cloud-sun"></i>
+            <i class="uil uil-temperature-half"></i>
             <p>Sensação Térmica</p>
           </div>
-          <p>12 C</p>
+          <div class="itemResult">
+            <p id="ThermalSensation">
+              00
+            </p>
+            <span>
+              ºC
+            </span>
+          </div>
         </div>
       </div>
     </div>
+
+    <div id="searchModal" class="searchModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p id="CloseModalButton">&times;</p>
+          <h2>Procure uma Cidade pelo Nome</h2>
+        </div>
+        <div class="modal-body">
+          <input id="SearchModalInput" type="text" placeholder="Insira no Nome da Cidade">
+          <button id="SearchModalButton">
+            <i class="uil uil-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>    
 
     <script src="./renderer.js"></script>
   </body>
