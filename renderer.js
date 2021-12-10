@@ -1,22 +1,38 @@
-function getWeatherByCityId(cityId) {
+async function getWeatherByCityId(cityId) {
+    initLogin()
     const url = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=0323a0a2e456757e8a98c09bec2ba751`;
-    const request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send();
-    return JSON.parse(request.responseText)
+    const request = await fetch(url);
+    const data = await request.json();
+    closeLogin()
+    return data;
 };
 
-function getWeatherByName(cityName) {
+async function getWeatherByName(cityName) {
+    initLogin()
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0323a0a2e456757e8a98c09bec2ba751`;
-    const request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send();
-    return JSON.parse(request.responseText)
+    const request = await fetch(url);
+    const data = await request.json();
+    closeLogin()
+    return data;
 };
 
-function searchCityByName() {
+function initLogin() {
+    const loading = document.getElementById('Loading');
+    loading.style.display = 'flex';
+    const main = document.getElementById('MainContent');
+    main.style.display = 'none';
+}
+
+function closeLogin() {
+    const main = document.getElementById('MainContent');
+    main.style.display = 'block';
+    const loading = document.getElementById('Loading');
+    loading.style.display = 'none';
+}
+
+async function searchCityByName() {
     const nameInput = document.getElementById('SearchModalInput').value;
-    const newData = getWeatherByName(nameInput);
+    const newData = await getWeatherByName(nameInput);
 
     if (newData.cod == '404') {
         closeModalForSearchCity();
@@ -96,12 +112,12 @@ function renderAPIRespostData(data) {
     changeIconByWeatherMain(main);
 };
 
-function main() {
-    renderAPIRespostData(getWeatherByCityId(6321162));
+async function main() {
+    renderAPIRespostData( await getWeatherByCityId(6321162));
 
     const selectCity = document.getElementById('selectCity');
-    selectCity.addEventListener("change", (event) => {
-        const newData = getWeatherByCityId(selectCity.value)
+    selectCity.addEventListener("change", async (event) => {
+        const newData = await getWeatherByCityId(selectCity.value)
         renderAPIRespostData(newData);
     });
 
